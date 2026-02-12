@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="wolf-btn">Vis meg en ulv</button>
+    <p id="wolf-amount">Antall ulver er: 0</p>
+    <div id="wolf-images"></div>
+    <script>
+      const wolfBtn = document.getElementById("wolf-btn");
+      const wolfAmount = document.getElementById("wolf-amount");
+      const wolfImages = document.getElementById("wolf-images");
+
+      let wolfCounter = 0;
+
+      wolfBtn.addEventListener("click", showWolf);
+
+      function showWolf() {
+        wolfImages.innerHTML += `<img src="assets/Wolf.jpeg" style="width: 150px">`;
+        updateWolfCounter();
+      }
+
+      function updateWolfCounter() {
+        wolfCounter++;
+        wolfAmount.innerText = `Antall katter er: ${wolfCounter}`;
+      }
+    </script>
+  </body>
+</html>
